@@ -13,40 +13,40 @@
 
 <div class="form-group">
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, :class => 'form-control' %>
+    <%= f.label :title, "Nombre" %><br>
+    <%= f.text_field :title, :class => 'form-control', :placeholder => "Ingresa un título" %>
   </div>
 </div>
 
 <div class="form-group">
   <div class="field">
-    <%= f.label :photo %><br>
-    <%= f.text_field :photo, :class => 'form-control' %>
+    <%= f.label :photo, "Foto" %><br>
+    <%= f.text_field :photo, :class => 'form-control', :placeholder => "Ingresa una imagen" %>
   </div>
 </div>
 
 <div class="form-group">
   <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address, :class => 'form-control' %>
+    <%= f.label :address, "Dirección" %><br>
+    <%= f.text_field :address, :class => 'form-control', :placeholder => "Ingresa una dirección" %>
   </div>
 </div>
 
 <div class="form-group">
   <div class="field">
-    <%= f.label :telephone %><br>
-    <%= f.telephone_field :telephone, :class => 'form-control' %>
+    <%= f.label :telephone, "Teléfono" %><br>
+    <%= f.telephone_field :telephone, :class => 'form-control', :placeholder => "Ingresa un teléfono" %>
   </div>
 </div>
 
 <div class="form-group">
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description, :class => 'form-control' %>
+    <%= f.label :description, "Descripción" %><br>
+    <%= f.text_area :description, :class => 'form-control', :placeholder => "Ingresa una descripción", :rows => "6", :cols => "30" %>
   </div>
 </div>
 
 <div class="actions">
-  <%= f.submit %>
+  <%= f.submit "Crear", :class => "btn btn-primary" %>
 </div>
 <% end %>

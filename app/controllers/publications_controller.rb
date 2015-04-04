@@ -1,5 +1,6 @@
 class PublicationsController < ApplicationController
   before_action :set_publication, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [ :index, :show]
 
   # GET /publications
   # GET /publications.json

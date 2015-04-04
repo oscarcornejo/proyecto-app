@@ -1,33 +1,45 @@
 <%= form_for(@publication) do |f| %>
-  <% if @publication.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@publication.errors.count, "error") %> prohibited this publication from being saved:</h2>
+<% if @publication.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@publication.errors.count, "error") %> prohibited this publication from being saved:</h2>
 
-      <ul>
-      <% @publication.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% @publication.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
+<div class="form-group">
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => 'form-control' %>
   </div>
+</div>
+
+<div class="form-group">
   <div class="field">
     <%= f.label :photo %><br>
-    <%= f.text_field :photo %>
+    <%= f.text_field :photo, :class => 'form-control' %>
   </div>
+</div>
+
+<div class="form-group">
   <div class="field">
     <%= f.label :address %><br>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, :class => 'form-control' %>
   </div>
+</div>
+
+<div class="form-group">
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, :class => 'form-control' %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
+
+<div class="actions">
+  <%= f.submit %>
+</div>
 <% end %>

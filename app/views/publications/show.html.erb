@@ -26,4 +26,5 @@
 </p>
 
 <%= link_to 'Edit', edit_publication_path(@publication) %> |
-<%= link_to 'Back', publications_path %>
+<%= link_to 'Back', publications_path %> | 
+<%= link_to 'Más publicaciones del mismo usuario', publicof_path(@publication.user.id) %>

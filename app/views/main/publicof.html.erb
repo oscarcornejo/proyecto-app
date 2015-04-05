@@ -1,12 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Lista de Publicaciones</h1>
-
-<div id="container">
-  
+<div class="container">
+  <h1>Mis Publicaciones</h1>
 
   <% @publications.each do |publication| %>
-  <div class="item" style="width:25%">
+  <div class="col-md-3">
     <div class="thumbnail">
       <%= publication.title %>
       <%= image_tag(publication.photo, :class => 'img-responsive') %>
@@ -19,7 +17,7 @@
         <%= link_to 'Show', publication, :class => 'btn' %>
         <%= link_to 'Edit', edit_publication_path(publication), :class => 'btn' %>
         <% if user_signed_in? %>
-        <%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %>
+          <%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %>
         <% end %>
       </div>
 
@@ -30,23 +28,6 @@
   <br>
   
   <% if user_signed_in? %>
-  <%= link_to 'Crear una Publicación', new_publication_path %>
+    <%= link_to 'Crear una Publicación', new_publication_path %>
   <% end %>
 </div>
-
-<script type="text/javascript">
-var $container = $('#container');
-// initialize
-$container.masonry({
-  columnWidth: 200,
-  itemSelector: '.item'
-});
-$(window).load(function(){
-  var $container = $('#container');
-// initialize
-$container.masonry({
-  columnWidth: 200,
-  itemSelector: '.item'
-});
-})
-</script>
